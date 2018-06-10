@@ -1,10 +1,20 @@
+/* Fonts */
+
+@font-face {
+    font-family: "Coolvetica";
+    src: url("../fonts/coolvetica.ttf");
+}
+
+
+
 * {
     box-sizing: border-box;
 }
 
-body {
+html, body {
     padding: 0px;
-    margin: 0px;
+    height: 100%;
+    margin: 0;
 }
 
 /* Responsive Grids */
@@ -20,7 +30,6 @@ body {
 .col-10 {width: 83.33%;}
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
-
 [class*="col-"] {
     float: left;
     padding: 15px;
@@ -33,10 +42,30 @@ body {
 }
 
 /* Header */
+
 .nav-menu {
-    padding: 5px;
+    padding: 1px;
 }
 
 .nav-menu li {
     list-style-type: none;
+    padding: 0;
+    text-align: center;
+    font-family: 'Coolvetica';
+    color: White;
 }
+
+.menu-point:hover {
+    cursor: pointer;
+}
+
+/* Landing Page */
+
+.landing-page {
+    padding:0;
+    height: 100%;
+    background-image: url(../images/landing.jpg);
+    background-size: cover;
+    position: absolute;
+}
+

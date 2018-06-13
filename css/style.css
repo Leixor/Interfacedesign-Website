@@ -5,31 +5,80 @@
     src: url("../fonts/coolvetica.ttf");
 }
 
+@font-face {
+    font-family: "Ananda";
+    src: url("../fonts/Ananda.ttf");
+}
+
+@font-face {
+    font-family: "AnandaBlack";
+    src: url("../fonts/AnandaBlack.ttf");
+}
+
+
 
 
 * {
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     padding: 0px;
     height: 100%;
     margin: 0;
 }
 
 /* Responsive Grids */
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
+
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.66%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-5 {
+    width: 41.66%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.66%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
 [class*="col-"] {
     float: left;
     padding: 15px;
@@ -43,6 +92,19 @@ html, body {
 
 /* Header */
 
+header {
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    z-index: 100;
+    transition: background-color 200ms linear;
+}
+
+header.scrolled {
+    background-color: #575757 !important;
+    transition: background-color 200ms linear;
+}
+
 .nav-menu {
     padding: 1px;
 }
@@ -55,17 +117,87 @@ html, body {
     color: White;
 }
 
-.menu-point:hover {
-    cursor: pointer;
+.menu-point {
+    position: relative;
+    color: #000;
+    text-decoration: none;
+}
+
+/* Cool hover effect */
+
+.menu-point:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.menu-point:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(0.4);
+  transform: scaleX(0.4);
+}
+
+/* main */
+
+main {
+    width: 100%;
+    height: 500%;
+}
+
+.section {
+    height: 20%;
+    width: 100%;
+    float: left;
 }
 
 /* Landing Page */
 
 .landing-page {
-    padding:0;
-    height: 100%;
     background-image: url(../images/landing.jpg);
     background-size: cover;
-    position: absolute;
 }
 
+.title-container {
+    text-align: center;
+}
+
+.landing-page-title {
+    height: auto;
+    font-size: 80px;
+    font-family: 'Ananda';
+    color: white;
+}
+
+.discover-button {
+    float: left;
+    height: 100px;
+    width: 200px;
+    font-family: 'Ananda';
+    font-size: 25px;
+    color: white;
+
+    background-color: #ffda8f;
+    border-radius: 10px;
+
+    text-align: center;
+    vertical-align: middle;
+    line-height: 100px;
+
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+}
+
+.discover-button:hover {
+    transition: 0.3s;
+    margin-top: -5px;
+    cursor: pointer;
+}

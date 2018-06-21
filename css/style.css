@@ -165,6 +165,7 @@ main {
 .landing-page {
     background-image: url(../images/landing.jpg);
     background-size: cover;
+    padding-top: 10%;
 }
 
 .title-container {
@@ -174,6 +175,7 @@ main {
     height: auto;
     font-size: 80px;
     color: white;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 150);
 }
 
 
@@ -194,10 +196,37 @@ main {
 
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     transition: 0.3s;
+
+    clear: both;
+
 }
 
 .discover-button:hover {
     transition: 2s;
-    margin-top: -5px;
     cursor: pointer;
+}
+
+.phrase {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    font-family: Arial;
+}
+
+/* Über uns */
+.about-us {
+    padding: 0;
+
+}
+
+.left-section {
+    float: left;
+    background-color: red;
+    height: 100%;
+}
+
+.right-section {
+    float: left;
+    background-color: blue;
+    height: 100%;
 }

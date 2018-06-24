@@ -1,4 +1,3 @@
-console.log("hallo");
 // Select all links with hashes
 $('a[href*="#"]')
     // Remove links that don't actually link to anything
@@ -35,6 +34,9 @@ $('a[href*="#"]')
         }
     });
 
+$(document).ready(function () {
+    switchMenu('Eissorten');
+})
 
 $(function () {
     $(document).scroll(function () {
@@ -42,3 +44,35 @@ $(function () {
         $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
     });
 });
+
+
+function switchMenu(name) {
+    $("#menuContainer").children().hide();
+    $("#menuPointsContainer").children().css("text-decoration", "none");
+    $('#' + name).show();
+    $('#menuCaption').text(name);
+    $('li:contains(' + name + ')').css("text-decoration", "underline");
+}
+
+function myFunction() {
+    var x = document.getElementById("nav-bar");
+    var y = document.getElementById("header");
+    if (x.className === "mobile-nav") {
+        x.className = "responsive";
+    } else {
+        x.className = "mobile-nav";
+    }
+}
+
+function expandMenu() {
+    if (!$("#navMenu").is(":visible")) {
+        $('#navMenu').show();
+        $('#navMenu').css("height", "250px");
+        $('#navMenu').css("visibility", "visible");
+    } else {
+        $('#navMenu').hide();
+        $('#navMenu').css("height", "0px");
+        $('#navMenu').css("visibility", "hidden");
+    }
+
+}

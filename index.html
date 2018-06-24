@@ -3,16 +3,20 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Eiscafé Bologna</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+
 </head>
 
 <body>
-    <header>
-        <filler class="col-4"></filler>
-        <nav class="col-4 nav-menu">
-            <ul class="row ">
+    <div class="header">
+        <filler class="col-4 filler"></filler>
+        <i class="fas fa-bars fa-2x bar-icon" onclick="expandMenu()"></i>
+        <nav class="col-4 nav-menu" id="navMenu">
+            <ul>
                 <a href="#section-2">
                     <li class="col-3 menu-point">Unser Eis</li>
                 </a>
@@ -27,41 +31,192 @@
                 </a>
             </ul>
         </nav>
-    </header>
+    </div>
     <main>
         <div class="row col-12 landing-page section" id="section-1">
             <div class="col-12 title-container">
                 <p class="landing-page-title">Eiscafé Bologna</p>
             </div>
-            <p class="phrase">Wie frisch aus Italien!</p>
-            <a href="#section-2">
+            <p class="phrase col-12">Wie frisch aus Italien!</p>
+            <a href="#section-2" class="col-12" id="discoverButton">
                 <div class="discover-button">Erfahre mehr!</div>
             </a>
         </div>
 
-        <div class="row col-12 section about-us" id="section-2">
+        <div class="row col-12 section our-ice" id="section-2">
             <div class="col-7 left-section">
+                <div class="col-8 section-caption">Unser Eis</div>
                 <div class="col-8 card-section">
-                    <img class="card-image col-4">
+                    <img class="card-image" src="images/square-ingredients.jpg">
+                    <p class="card-caption">Beste Zutaten</p>
+                    <p class="card-text">
+                        Nur die besten Zutaten finden den Weg in unser Eis! Den Sie wissen: Man ist was man isst.
+                    </p>
                 </div>
                 <div class="col-8 card-section">
-                    <img class="card-image col-4">
+                    <img class="card-image" src="images/square-production.jpg">
+                    <p class="card-caption">Traditionelle Herstellung</p>
+                    <p class="card-text">
+                        Mit mehr als 30 Jahren Erfahrung in den Künsten der Eismacherei, garantieren wir ihnen traditionell guten Eisgenuss.
+                    </p>
                 </div>
                 <div class="col-8 card-section">
-                    <img class="card-image col-4">
+                    <img class="card-image" src="images/square-variety.jpg">
+                    <p class="card-caption">Vielfalt</p>
+                    <p class="card-text">
+                        Wir bieten ihnen mit über 25 Sorten eine Vielfalt die Sie nicht wieder missen wollen.
+                    </p>
+                </div>
+
+            </div>
+            <div class="col-5 right-section"></div>
+        </div>
+
+
+        <div class="row col-12 section about-us" id="section-3">
+            <div class="col-12 section-caption">Über uns</div>
+            <div class="col-6 section-text">Wir sind ein Team welches die Leidenschaft für das Eis gemeinsam mit Ihnen durch unser großartiges Produkt teilen will. Hier einen Einblick wer hinter unserem leckeren Eis eigentlich steckt.</div>
+            <div class="card-container col-12">
+                <div class="card-section col-3">
+                    <img class="card-image" src="images/square-teresa.jpg">
+                    <p class="employee-text col-12">
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                    </p>
+                    <p class="employee-name col-12">
+                        - Teresa Bologna -
+                    </p>
+                    <p class="employee-role col-12">
+                        Inhaberin
+                    </p>
+                </div>
+                <div class="card-section col-3">
+                    <img class="card-image" src="images/square-gregorio.jpeg">
+                    <p class="employee-text col-12">
+                        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                    </p>
+                    <p class="employee-name col-12">
+                        - Gregorio Bologna -
+                    </p>
+                    <p class="employee-role col-12">
+                        Bedienung
+                    </p>
+                </div>
+                <div class="card-section col-3">
+                    <img class="card-image" src="images/square-vincenzo.jpg">
+                    <p class="employee-text col-12">
+                        Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+                    </p>
+                    <p class="employee-name col-12">
+                        - Vincenzo Bologna -
+                    </p>
+                    <p class="employee-role col-12">
+                        Eisverkäufer
+                    </p>
                 </div>
             </div>
-            <img class="col-5 right-section" src="images/ice-cream.jpg">
         </div>
 
-
-        <div class="row col-12 section" id="section-3">
+        <div class="row col-12 section menu" id="section-4">
+            <div class="col-4 menu-listing menu-alignment">
+                <div class="menu-alignment menu-header col-12">
+                    <p class="menu-caption">Menü</p>
+                </div>
+                <div class="menu-alignment menu-body col-12">
+                    <ul class="menu-alignment" id="menuPointsContainer">
+                        <li onclick="switchMenu('Eissorten')">Eissorten</li>
+                        <li onclick="switchMenu('Eisspezialitäten')">Eisspezialitäten</li>
+                        <li onclick="switchMenu('Getränke')">Getränke</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-8 menu-content menu-alignment">
+                <div class="menu-alignment menu-header col-12">
+                    <p class="menu-caption" id="menuCaption">Test</p>
+                </div>
+                <div class="menu-alignment menu-body col-12" id="menuContainer">
+                    <div class="menu-listing-body col-8" id="Eissorten">
+                        <div class="col-6 menu-list">
+                            <ul>
+                                <li>Stracciatella</li>
+                                <li>Haselnuss</li>
+                                <li>Schokolade</li>
+                                <li>Himmelblau</li>
+                                <li>Honigmelone</li>
+                                <li>Tiramisu</li>
+                                <li>Pistazie</li>
+                            </ul>
+                        </div>
+                        <div class="col-6  menu-list">
+                            <ul>
+                                <li>Mokka</li>
+                                <li>Zuppa Inglese</li>
+                                <li>Banane</li>
+                                <li>Himbeere</li>
+                                <li>Zitrone</li>
+                                <li>Waldmeister</li>
+                                <li>Joghurt</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="menu-listing-body col-8" id="Eisspezialitäten">
+                        <div class="col-6 menu-list">
+                            <ul>
+                                <li>Amarenabecher</li>
+                                <li>Schokobecher</li>
+                                <li>Bananensplit</li>
+                                <li>Spaghettieis</li>
+                                <li>Eierlikörbecher</li>
+                            </ul>
+                        </div>
+                        <div class="col-6  menu-list">
+                            <ul>
+                                <li>Pinocchiobecher</li>
+                                <li>Smartiesbecher</li>
+                                <li>Fruchtbecher</li>
+                                <li>Eiskaffee</li>
+                                <li>Milchshake</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="menu-listing-body col-8" id="Getränke">
+                        <div class="col-6 menu-list">
+                            <ul>
+                                <li>Cola</li>
+                                <li>Fanta</li>
+                                <li>Eistee</li>
+                                <li>Capri Sonne</li>
+                                <li>Mineralwasser</li>
+                                <li>Apfelschorle</li>
+                            </ul>
+                        </div>
+                        <div class="col-6  menu-list">
+                            <ul>
+                                <li>Cappuccino</li>
+                                <li>Latte Macchiato</li>
+                                <li>Espresso</li>
+                                <li>Café Lungo</li>
+                                <li>Tee</li>
+                                <li>Café Freddo</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="row col-12 section" id="section-4">
+        <div class="row col-12 section contact" id="section-5">
+            <div class="col-12 section-caption">Kontakt</div>
+            <form class="contact-form col-6">
+                <input type="text" placeholder="Name">
+                <input type="text" placeholder="E-Mail">
+                <input type="text" placeholder="Betreff">
+                <textarea type="text" placeholder="Anliegen" id="Anliegen"></textarea>
+                <input type="submit" id="Senden">
+            </form>
         </div>
-
-        <div class="row col-12 section" id="section-5">
+        <div class="row col-12 footer section">
+            <p class="footer-print col-6">Eiscafé Bologna</p>
+            <p class="footer-copyright col-6">by Vincenzo Bologna</p>
         </div>
     </main>
 

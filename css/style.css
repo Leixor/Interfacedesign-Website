@@ -15,9 +15,6 @@
     src: url("../fonts/AnandaBlack.ttf");
 }
 
-
-
-
 * {
     box-sizing: border-box;
 }
@@ -27,6 +24,14 @@ body {
     padding: 0px;
     height: 100%;
     margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+div {
+    box-sizing: border-box;
 }
 
 /* Responsive Grids */
@@ -90,9 +95,9 @@ body {
     display: table;
 }
 
-/* Header */
+/* .header */
 
-header {
+.header {
     position: fixed;
     width: 100%;
     height: 60px;
@@ -100,9 +105,9 @@ header {
     transition: background-color 200ms linear;
 }
 
-header.scrolled {
+.header.scrolled {
     background-color: #575757 !important;
-    transition: background-color 200ms linear;
+    transition: background-color 0.5s linear;
 }
 
 .nav-menu {
@@ -115,6 +120,14 @@ header.scrolled {
     text-align: center;
     font-family: 'Coolvetica';
     color: White;
+
+}
+
+.bar-icon {
+    position: fixed;
+    text-align: left;
+    color: white;
+    visibility: hidden;
 }
 
 .menu-point {
@@ -166,6 +179,11 @@ main {
     background-image: url(../images/landing3.jpg);
     background-size: cover;
     padding-top: 10%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-flow: row wrap;
+    justify-content: space-around;
 }
 
 .title-container {
@@ -173,7 +191,7 @@ main {
     float: left;
     font-family: 'Ananda';
     height: auto;
-    font-size: 80px;
+    font-size: 5vw;
     color: white;
     text-shadow: 5px 5px 10px rgba(0, 0, 0, 150);
 }
@@ -184,7 +202,7 @@ main {
     width: 200px;
     margin: 0 auto;
     font-family: 'Ananda';
-    font-size: 25px;
+    font-size: 1.5vw;
     color: white;
 
     background-color: #ffda8f;
@@ -198,7 +216,13 @@ main {
     transition: 0.3s;
 
     clear: both;
+    text-decoration: none;
 
+}
+
+#discoverButton {
+    text-decoration: none;
+    margin-top: -50px;
 }
 
 .discover-button:hover {
@@ -213,13 +237,14 @@ main {
     font-family: Arial;
 }
 
-/* Über uns */
+/* Unser Eis */
 
-.about-us {
+.our-ice {
     padding: 0;
 }
 
 .left-section {
+    padding-top: 60px;
     float: left;
     background-color: white;
     height: 100%;
@@ -230,21 +255,1130 @@ main {
     justify-content: space-around;
 }
 
+.section-caption {
+    font-family: "Ananda";
+    font-size: 4vw;
+    text-align: center;
+    text-decoration: underline;
+}
+
 .card-section {
-    margin: auto;
     height: 20%;
     background-color: white;
-    box-shadow: 0 5px 20px 2px rgba(0, 0, 0, 100);
-    display:flex;
-    align-items: center;
+    box-shadow: 0 2px 5px 0px rgba(100, 100, 100, 20);
+    border: 1px solid rgba(100, 100, 100, 100);
 }
 
 .card-image {
-    height: 70%;
+    float: left;
+    display: block;
+    max-height: 100%;
+    width: auto;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.card-caption {
+    font-family: "Coolvetica";
+    font-size: 2vw;
+    margin-bottom: -10px;
+}
+
+.card-text {
+    font-size: 1vw;
+    color: #555555;
+    max-width: 90%;
 }
 
 .right-section {
     float: left;
     height: 100%;
     padding: 0;
+    background-image: url(../images/ice-cream.jpg);
+}
+
+/* Über uns */
+
+.about-us {
+    padding-top: 80px;
+    text-align: center;
+    float: left;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.about-us .section-caption {
+    margin-bottom: -70px;
+}
+
+.about-us .section-text {
+    font-size: 1.5vw;
+    color: #555555;
+}
+
+.about-us .card-section {
+    float: left;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    height: 40%;
+    max-width: 22%;
+}
+
+.about-us .card-section .card-image {
+    width: 60%;
+    margin: 0;
+    border: 2px solid grey;
+}
+
+.card-container {
+    float: left;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.employee-text {
+    font-size: 20px: color: #222222
+}
+
+.employee-name {
+    margin: 0;
+    font-size: 18px;
+    font-family: "Coolvetica";
+    color: #555555;
+}
+
+.employee-role {
+    margin: 0;
+    font-size: 14px;
+    color: #555555;
+    font-style: italic;
+}
+
+/* Menu */
+
+.menu {
+    padding: 0;
+}
+
+.menu-alignment {
+    align-items: center;
+    flex-direction: column;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding: 0;
+}
+
+.menu-listing {
+    height: 100%;
+    border-right: 5px solid #555555;
+}
+
+.menu-content {
+    height: 100%;
+}
+
+.menu-.header {
+    height: 20%;
+}
+
+.menu-body {
+    height: 80%;
+}
+
+.menu-listing .menu-.header {
+    padding-top: 60px;
+}
+
+.menu-listing .menu-body {
+    padding-top: 50px;
+}
+
+.menu-listing ul {
+    height: 100%;
+    text-align: center;
+    font-family: "Coolvetica";
+    font-size: 2vw;
+    color: #666666;
+    transition: 0.3s;
+}
+
+.menu-listing ul li {
+    margin: 60px;
+    list-style: none;
+}
+
+.menu-listing ul li:hover {
+    cursor: pointer;
+}
+
+.menu-listing-body {
+    height: 100%;
+    position: absolute;
+    padding: 50px;
+}
+
+.menu-listing .menu-body {}
+
+.menu-content .menu-.header {
+    padding-top: 60px;
+}
+
+.menu-caption {
+    font-family: "Ananda";
+    font-size: 4vw;
+    text-align: center;
+    padding-left: -10px;
+    text-decoration: underline;
+}
+
+.menu-content .menu-caption {}
+
+.menu-list ul {
+    padding: 10px;
+    list-style: none;
+    text-align: center;
+}
+
+.menu-list ul li {
+    padding: 20px;
+    font-size: 2.5vw;
+    font-family: "Ananda";
+    color: #555555;
+}
+
+/* Kontakt */
+
+.contact {
+    align-items: center;
+    flex-direction: column;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding: 0;
+    display: flex;
+    padding-top: 80px;
+    height: calc(20% - 70px);
+}
+
+.contact-form {
+    margin: auto;
+}
+
+.contact-form input {
+    align-items: center;
+    flex-direction: column;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    display: block;
+    border: 2px solid grey;
+    background-color: #f3f3f3;
+    font-size: 1.5vw;
+    margin-bottom: 20px;
+    padding: 15px;
+    width: 50%;
+    height: 60px;
+    font-family: Arial;
+}
+
+#Anliegen {
+    margin-top: 70px;
+    display: block;
+    border: 2px solid grey;
+    background-color: #f3f3f3;
+    font-size: 20px;
+    margin-bottom: 20px;
+    padding: 15px;
+    width: 50%;
+    height: 70px;
+    height: 250px;
+    width: 90%;
+    font-family: Arial;
+}
+
+#Senden {
+    width: 30%;
+    height: 70px;
+}
+
+/* Footer */
+
+.footer {
+    float: left;
+    height: 70px;
+    background-color: #575757;
+}
+
+.footer-print {
+    color: white;
+    font-family: "Ananda";
+    padding: 0;
+    text-align: center;
+}
+
+.footer-copyright {
+    color: white;
+    padding: 0;
+    text-align: right;
+}
+
+
+
+
+
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .left-section {
+        width: 100%;
+    }
+
+    .right-section {
+        width: 0%;
+        visibility: hidden;
+    }
+
+    .section-caption {
+        font-size: 8vw;
+    }
+
+    .our-ice .card-section {
+        width: 90%;
+        height: 15%;
+    }
+
+    .card-caption {
+        font-size: 20px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .card-text {
+        font-size: 2.5vw;
+    }
+
+    .menu-content ul {
+        font-size: 40px;
+    }
+
+    .about-us .card-container {
+        flex-direction: row-reverse;
+
+    }
+    .about-us .card-section {
+        width: 90%;
+        height: 15%;
+        max-width: 100%;
+    }
+
+    .about-us .section-text {
+        visibility: hidden;
+    }
+
+    .card-container {
+        overflow: hidden;
+    }
+
+    .card-container .card-section:nth-of-type(2) {
+        visibility: hidden;
+    }
+
+    .card-container .card-section:nth-of-type(3) {
+        visibility: hidden;
+    }
+
+    .section {
+        overflow: hidden;
+    }
+
+    .title-container {
+        font-size: 5vh;
+    }
+    .discover-button {
+        font-size: 3vh;
+    }
+
+    .menu-caption {
+        font-size: 5vh;
+        padding: 0;
+        text-align: center;
+    }
+    .menu-content {
+        padding: 0;
+        margin: 0;
+        width: 98%;
+    }
+
+    .menu-content .menu-.header {
+        width: 100%;
+    }
+
+    .menu-listing {
+        visibility: hidden;
+        width: 0%;
+    }
+
+    .menu-listing-body {
+        width: 100%;
+        padding: 30px;
+    }
+
+    .menu-list li {
+        width: 50%;
+        text-align: right;
+    }
+
+    .menu-list ul li {
+        font-size: 2.5vh;
+        text-align: left;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+
+    .contact-form input {
+        width: 100%;
+        font-size: 2vh;
+    }
+
+    #Anliegen {
+        width: 100%;
+        height: 20%;
+        margin-top: 0px;
+        font-size: 16px;
+    }
+
+    #Senden {
+        height: 100%;
+    }
+
+    .header {
+        padding: 0;
+        width: 100%;
+        background-color: #575757;
+        height: 60px;
+        right: 0;
+    }
+
+    .nav-menu {
+        height: 0px;
+        width: 100%;
+        transition: 0.5s;
+        overflow: hidden;
+        right: 0;
+    }
+
+    .navMenu {
+        visibility: hidden;
+        transition: 0.4s;
+        height: 0px;
+    }
+
+    .nav-menu li {
+        display: block;
+        float: none;
+        text-decoration: none;
+        border-bottom: 1px solid white;
+    }
+
+    .nav-menu ul {
+        padding: 0;
+    }
+
+    .menu-point {
+        width: 100%;
+        background-color: #575757;
+        height: 50px;
+        font-size: 25px;
+        margin: 0;
+        padding: 0;
+        line-height: 50px;
+    }
+
+    .menu-link {
+        text-decoration: none;
+    }
+    .bar-icon {
+        visibility: visible;
+        z-index: 200;
+        padding: 15px;
+    }
+
+    .menu-point:before {
+        text-decoration: none;
+    }
+
+    .menu-point:hover:before {
+        visibility: hidden;
+    }
+
+    .filler {
+        width: 0px;
+        height: 0px;
+        margin: 0px;
+        padding: 0px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .left-section {
+        width: 100%;
+    }
+
+    .right-section {
+        width: 0%;
+        visibility: hidden;
+    }
+
+    .section-caption {
+        font-size: 8vw;
+    }
+
+
+    .card-caption {
+        font-size: 2vw;
+        padding: 0;
+        margin: 0;
+    }
+
+    .card-text {
+        font-size: 1.5vw;
+    }
+
+    .menu-content ul {
+        font-size: 40px;
+    }
+
+    .about-us .card-section {
+        width: 30%;
+        height: 100%;
+        max-width: 100%;
+        overflow: hidden;
+        padding: 5px;
+    }
+
+    .about-us .card-image {
+        width: 50%;
+    }
+
+    .about-us .employee-text {
+        visibility: hidden;
+        height: 0px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .about-us .section-text {
+        visibility: hidden;
+    }
+
+    .card-section {
+        padding: 5px;
+    }
+    .card-section .card-image {
+        height: 100%;
+    }
+
+    .card-container {
+        overflow: hidden;
+    }
+
+    .section {
+        overflow: hidden;
+    }
+
+    .title-container {
+        font-size: 5vw;
+    }
+    .discover-button {
+
+        font-size: 3vw;
+    }
+
+    .menu-caption {
+        font-size: 5vw;
+        padding: 0;
+        text-align: center;
+    }
+
+    .menu {
+        padding-top: 60px;
+        overflow: hidden;
+    }
+
+    .menu-content {
+        padding: 0;
+        margin: 0;
+        width: 98%;
+    }
+
+    .menu-content .menu-header {
+        width: 100%;
+    }
+
+    .menu-listing {
+        visibility: hidden;
+        width: 0%;
+    }
+
+    .menu-content .menu-body {
+        padding: 0;
+
+    }
+
+    .menu-listing-body {
+        width: 100%;
+        padding: 0;
+    }
+
+    .menu-list {
+        margin-top: -90px;
+        overflow: hidden;
+        height: 80%;
+    }
+    .menu-list li {
+        width: 50%;
+        text-align: right;
+    }
+
+    .menu-list ul li {
+        font-size: 2vw;
+        text-align: left;
+    }
+
+
+    .contact .section-caption {
+        font-size: 5vw;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+
+    .contact-form input {
+        flex-direction: row;
+        flex-flow: column wrap;
+        height: 20px;
+        font-size: 2vw;
+        margin-bottom: 2px;
+    }
+
+    #Anliegen {
+        width: 70%;
+        height: 50%;
+        margin-top: 0px;
+        font-size: 16px;
+        float: left;
+    }
+
+    #Senden {
+        height: 100%;
+        float: right;
+    }
+
+    .header {
+        padding: 0;
+        width: 100%;
+        background-color: #575757;
+        height: 60px;
+        right: 0;
+    }
+
+    .nav-menu {
+        height: 0px;
+        width: 100%;
+        transition: 0.5s;
+        overflow: hidden;
+        right: 0;
+    }
+
+    .navMenu {
+        visibility: hidden;
+        transition: 0.4s;
+        height: 0px;
+    }
+
+    .nav-menu li {
+        display: block;
+        float: none;
+        text-decoration: none;
+        border-bottom: 1px solid white;
+    }
+
+    .nav-menu ul {
+        padding: 0;
+    }
+
+    .menu-point {
+        width: 100%;
+        background-color: #575757;
+        height: 50px;
+        font-size: 25px;
+        margin: 0;
+        padding: 0;
+        line-height: 50px;
+    }
+
+    .menu-link {
+        text-decoration: none;
+    }
+    .bar-icon {
+        visibility: visible;
+        z-index: 200;
+        padding: 15px;
+    }
+
+    .menu-point:before {
+        text-decoration: none;
+    }
+
+    .menu-point:hover:before {
+        visibility: hidden;
+    }
+
+    .filler {
+        width: 0px;
+        height: 0px;
+        margin: 0px;
+        padding: 0px;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .left-section {
+        width: 100%;
+    }
+
+    .right-section {
+        width: 0%;
+        visibility: hidden;
+    }
+
+    .section-caption {
+        font-size: 8vw;
+    }
+
+    .our-ice .card-section {
+        width: 90%;
+        height: 15%;
+    }
+
+    .card-caption {
+        font-size: 20px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .card-text {
+        font-size: 2.5vw;
+    }
+
+    .menu-content ul {
+        font-size: 40px;
+    }
+
+    .about-us .card-container {
+        flex-direction: row-reverse;
+
+    }
+    .about-us .card-section {
+        width: 90%;
+        height: 15%;
+        max-width: 100%;
+    }
+
+    .about-us .section-text {
+        visibility: hidden;
+    }
+
+
+    .card-container {
+        overflow: hidden;
+    }
+
+    .card-container .card-section:nth-of-type(2) {
+        visibility: hidden;
+    }
+
+    .card-container .card-section:nth-of-type(3) {
+        visibility: hidden;
+    }
+
+    .section {
+        overflow: hidden;
+    }
+
+    .title-container {
+        font-size: 5vh;
+    }
+    .discover-button {
+        font-size: 3vh;
+    }
+
+    .menu-caption {
+        font-size: 5vh;
+        padding: 0;
+        text-align: center;
+    }
+    .menu-content {
+        padding: 0;
+        margin: 0;
+        width: 98%;
+    }
+
+    .menu-content .menu-.header {
+        width: 100%;
+    }
+
+    .menu-listing {
+        visibility: hidden;
+        width: 0%;
+    }
+
+    .menu-listing-body {
+        width: 100%;
+        padding: 30px;
+    }
+
+    .menu-list li {
+        width: 50%;
+        text-align: right;
+    }
+
+    .menu-list ul li {
+        font-size: 2.5vh;
+        text-align: left;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+
+    .contact-form input {
+        width: 100%;
+        font-size: 2vh;
+        margin-bottom: 40px;
+        height: 70px;
+    }
+
+    #Anliegen {
+        width: 100%;
+        height: 200px;
+        margin-top: 0px;
+        font-size: 16px;
+    }
+
+    #Senden {
+        height: 100%;
+    }
+
+    .header {
+        padding: 0;
+        width: 100%;
+        background-color: #575757;
+        height: 60px;
+        right: 0;
+    }
+
+    .nav-menu {
+        height: 0px;
+        width: 100%;
+        transition: 0.5s;
+        overflow: hidden;
+        right: 0;
+    }
+
+    .navMenu {
+        visibility: hidden;
+        transition: 0.4s;
+        height: 0px;
+    }
+
+    .nav-menu li {
+        display: block;
+        float: none;
+        text-decoration: none;
+        border-bottom: 1px solid white;
+    }
+
+    .nav-menu ul {
+        padding: 0;
+    }
+
+    .menu-point {
+        width: 100%;
+        background-color: #575757;
+        height: 50px;
+        font-size: 25px;
+        margin: 0;
+        padding: 0;
+        line-height: 50px;
+    }
+
+    .menu-link {
+        text-decoration: none;
+    }
+    .bar-icon {
+        visibility: visible;
+        z-index: 200;
+        padding: 15px;
+    }
+
+    .menu-point:before {
+        text-decoration: none;
+    }
+
+    .menu-point:hover:before {
+        visibility: hidden;
+    }
+
+    .filler {
+        width: 0px;
+        height: 0px;
+        margin: 0px;
+        padding: 0px;
+    }
+
+}
+
+/*
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+
+    .left-section {
+        width: 100%;
+    }
+
+    .right-section {
+        width: 0%;
+        visibility: hidden;
+    }
+
+    .section-caption {
+        font-size: 8vw;
+    }
+
+
+    .card-caption {
+        font-size: 2vw;
+        padding: 0;
+        margin: 0;
+    }
+
+    .card-text {
+        font-size: 1.5vw;
+    }
+
+    .menu-content ul {
+        font-size: 40px;
+    }
+
+    .about-us .card-section {
+        width: 30%;
+        height: 100%;
+        max-width: 100%;
+        overflow: hidden;
+        padding: 5px;
+    }
+
+    .about-us .card-image {
+        width: 50%;
+    }
+
+    .about-us .employee-text {
+        visibility: hidden;
+        height: 0px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .about-us .section-text {
+        visibility: hidden;
+    }
+
+    .card-section {
+        padding: 5px;
+    }
+    .card-section .card-image {
+        height: 100%;
+    }
+
+    .card-container {
+        overflow: hidden;
+    }
+
+    .section {
+        overflow: hidden;
+    }
+
+    .title-container {
+        font-size: 5vw;
+    }
+    .discover-button {
+
+        font-size: 3vw;
+    }
+
+    .menu-caption {
+        font-size: 5vw;
+        padding: 0;
+        text-align: center;
+    }
+
+    .menu {
+        padding-top: 60px;
+        overflow: hidden;
+    }
+
+    .menu-content {
+        padding: 0;
+        margin: 0;
+        width: 98%;
+    }
+
+    .menu-content .menu-header {
+        width: 100%;
+    }
+
+    .menu-listing {
+        visibility: hidden;
+        width: 0%;
+    }
+
+    .menu-content .menu-body {
+        padding: 0;
+
+    }
+
+    .menu-listing-body {
+        width: 100%;
+        padding: 0;
+    }
+
+    .menu-list {
+        margin-top: -90px;
+        overflow: hidden;
+        height: 80%;
+    }
+    .menu-list li {
+        width: 50%;
+        text-align: right;
+    }
+
+    .menu-list ul li {
+        font-size: 2vw;
+        text-align: left;
+    }
+
+
+    .contact .section-caption {
+        font-size: 5vw;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+
+    .contact-form input {
+        flex-direction: row;
+        flex-flow: column wrap;
+        height: 20px;
+        font-size: 2vw;
+        margin-bottom: 2px;
+    }
+
+    #Anliegen {
+        width: 70%;
+        height: 50%;
+        margin-top: 0px;
+        font-size: 16px;
+        float: left;
+    }
+
+    #Senden {
+        height: 100%;
+        float: right;
+    }
+
+    .header {
+        padding: 0;
+        width: 100%;
+        background-color: #575757;
+        height: 60px;
+        right: 0;
+    }
+
+    .nav-menu {
+        height: 0px;
+        width: 100%;
+        transition: 0.5s;
+        overflow: hidden;
+        right: 0;
+    }
+
+    .navMenu {
+        visibility: hidden;
+        transition: 0.4s;
+        height: 0px;
+    }
+
+    .nav-menu li {
+        display: block;
+        float: none;
+        text-decoration: none;
+        border-bottom: 1px solid white;
+    }
+
+    .nav-menu ul {
+        padding: 0;
+    }
+
+    .menu-point {
+        width: 100%;
+        background-color: #575757;
+        height: 50px;
+        font-size: 25px;
+        margin: 0;
+        padding: 0;
+        line-height: 50px;
+    }
+
+    .menu-link {
+        text-decoration: none;
+    }
+    .bar-icon {
+        visibility: visible;
+        z-index: 200;
+        padding: 15px;
+    }
+
+    .menu-point:before {
+        text-decoration: none;
+    }
+
+    .menu-point:hover:before {
+        visibility: hidden;
+    }
+
+    .filler {
+        width: 0px;
+        height: 0px;
+        margin: 0px;
+        padding: 0px;
+    }
+
 }
